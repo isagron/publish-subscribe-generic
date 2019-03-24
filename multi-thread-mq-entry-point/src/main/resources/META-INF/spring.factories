@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.innnon.spring.mq_entry_point.MqEntryPointAutoConfiguration

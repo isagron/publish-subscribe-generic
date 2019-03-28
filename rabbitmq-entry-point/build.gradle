@@ -9,6 +9,10 @@ group = 'com.github.isagron'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+bootJar {
+    enabled = false
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -23,7 +27,6 @@ dependencies {
     compile files('../../diagnose_driven_workflow/message_queue/build/libs/message_queue-1.0-SNAPSHOT.jar')
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.kafka:spring-kafka'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
@@ -31,5 +34,4 @@ dependencies {
     runtimeOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
